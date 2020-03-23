@@ -47,16 +47,72 @@ table {
    border-spacing: 0;
 }
 
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em;
+	padding: 0;
+}
+
 input, select {
 	vertical-align: middle;
 }
 
 /* Start of my custom CSS for blog project */
 
-*{
-  padding: 0px;
-  margin: 0px;
+
+body{
+	background-color: #f3f3f3;
 }
+
+header{
+	background-color: #fff;
+	width: 100%;
+	height: 100px;
+}
+
+header .header-brand{
+	font-family: Catamaran;
+	font-size: 24px;
+	color:#111;
+	font-weight: 900;
+	text-transform: uppercase;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 0px;
+	text-align: center;
+}
+
+header nav ul{
+	display: grid;
+	margin: 0 auto;
+	width: fit-content;
+}
+
+header nav ul li{
+	display: flex;
+	justify-content: center;
+	/* float for no gap between links */
+	float: left;
+	list-style: none;
+	padding: 0 16px;
+
+}
+
+header nav ul li a{
+	font-family: Catamaran;
+	font-size: 16px;
+	color:#111;
+	font-weight: 900;
+}
+
+	/* No display of "Cases" on mobile version */
+header .header-cases{
+	display: none;
+}
+
 
 h1{
 	font-size: 48px;
@@ -100,6 +156,7 @@ u{
 
 a{
 	text-decoration: none;
+	color: #111;
 }
 
 blockquote{
