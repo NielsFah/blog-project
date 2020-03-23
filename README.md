@@ -5,7 +5,7 @@ Task:
 Personal Blog Website
 This project requires you to utilize your HTML and CSS skills to build out a personal blog website, including custom images, layout, and styling. Along with webpage design considerations, you'll work to appropriately structure your files, as well as use proper CSS and HTML formatting & style.
 
-Project Files
+Project Files:
 In this project, you'll get to start from scratch! To complete the project, you are able to decide on the HTML and CSS files to include as part of your work, given that the end result is within the confines of the project rubric provided below. This should include, at minimum, HTML files related to:
 
 the blog website
@@ -39,12 +39,12 @@ Custom images, layout, and styling.
 
 Foundations/Building Blocks:
   Typography: Custom design for typography with at least 3 unique properties for each typography selector
-  Headers (h1 to h3 at minimum) <h1>
-  Paragraph Text <p>
+  Headers (h1 to h3 at minimum)
+  Paragraph Text
     a. Bold
     b. Italic
     c. Underlined
-  Links <a>
+  Links
   Quotes
   Colors: At least 3 colors are used.
 
@@ -94,30 +94,30 @@ Layout:
   Grid Based Layout
   Uses CSS Grid at least twice throughout the project to create the layout for pages
 
-  Responsiveness:
 
-    Multi-Device Web Design
+Responsiveness:
 
-    Pages are mobile-friendly and display correctly on all display sizes (mobile, tablet, desktop).
-    Note: You can simulate Mobile Devices with Device Mode in Chrome DevTools.
+  Multi-Device Web Design
+   Pages are mobile-friendly and display correctly on all display sizes (mobile, tablet, desktop).
+   Note: You can simulate Mobile Devices with Device Mode in Chrome DevTools.
 
 
 Quality:
 
-Valid HTML:
+  Valid HTML:
 
-  HTML5 semantic tags such as <header>, <footer>, <article>, <section> , etc. are used to add meaning to the code.
-  No div or section selectors are without a CSS class or id.
+    HTML5 semantic tags such as <header>, <footer>, <article>, <section> , etc. are used to add meaning to the code.
+    No div or section selectors are without a CSS class or id.
   
   
-HTML Formatting Rules:
+  HTML Formatting Rules:
 
-  All code is lowercase
-  The code does not have trailing white spaces.
-  Indentation is consistent (either all tabs or all 2 spaces or all 4 spaces etc).
-  Code uses a new line for every block, list or table element and indent every such child element (it is acceptable to put all elements in one line).
-  When quoting attribute values, code uses consistent quotation marks (single vs. double).
-  
+    All code is lowercase
+    The code does not have trailing white spaces.
+    Indentation is consistent (either all tabs or all 2 spaces or all 4 spaces etc).
+    Code uses a new line for every block, list or table element and indent every such child element (it is acceptable to put all elements in one line).
+    When quoting attribute values, code uses consistent quotation marks (single vs. double).
+
   
 HTML Style Rules:
 
