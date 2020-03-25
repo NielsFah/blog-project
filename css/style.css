@@ -60,81 +60,6 @@ input, select {
 	vertical-align: middle;
 }
 
-/* Start of my custom CSS for blog project */
-
-
-body{
-	background-color: #f3f3f3;
-}
-
-header{
-	background-color: #fff;
-	width: 100%;
-	height: 100px;
-}
-
-header .header-brand{
-	font-family: Catamaran;
-	font-size: 24px;
-	color:#111;
-	font-weight: 900;
-	text-transform: uppercase;
-	display: block;
-	margin: 0 auto;
-	padding: 20px 0px;
-	text-align: center;
-}
-
-header nav ul{
-	display: grid;
-	margin: 0 auto;
-	width: fit-content;
-}
-
-header nav ul li{
-	display: flex;
-	justify-content: center;
-	/* float for no gap between links */
-	float: left;
-	list-style: none;
-	padding: 0 16px;
-
-}
-
-header nav ul li a{
-	font-family: Catamaran;
-	font-size: 16px;
-	color:#111;
-	font-weight: 900;
-}
-
-	/* No display of "Cases" on mobile version */
-header .header-cases{
-	display: none;
-}
-
-
-h1{
-	font-size: 48px;
-	font-family: 'Catamaran', sans-serif;
-	color: #111;
-	font-weight: 900;
-}
-
-h2{
-	font-size: 32px;
-	font-family: 'Catamaran', sans-serif;
-	color: #222;
-	font-weight: 800;
-}
-
-h3{
-	font-size: 24px;
-	font-family: 'Catamaran', sans-serif;
-	color: #333;
-	font-weight: 700;
-}
-
 p{
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 12px;
@@ -165,3 +90,449 @@ blockquote{
 	color: #111;
 	font-weight: 400;
 }
+
+/* Start of my custom CSS for blog project */
+
+body{
+	background-color: #eee;
+}
+
+header{
+	/* navigation area of 100px height & width according to resolution on device */
+	background-color: #fff;
+	width: 100vw;
+	height: 100px;
+}
+
+header .header-brand{
+	/* Home Link on top of navigation */
+	font-family: Catamaran;
+	font-size: 24px;
+	color:#111;
+	font-weight: 900;
+	text-transform: uppercase;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 0px;
+	text-align: center;
+}
+
+header nav ul{
+	/* flexbox-container to distribute the navigation items below */
+	display: flex;
+	margin: 0 auto;
+	width: fit-content;
+}
+
+header nav ul li{
+	/* Styling the list for centered navigation bar on top */
+	justify-content: center;
+	list-style: none;
+	padding: 0 16px;
+
+}
+
+header nav ul li a{
+	/* Style of the link text */
+	font-family: Catamaran;
+	font-size: 16px;
+	color:#111;
+	font-weight: 900;
+}
+
+header .header-cases{
+	/* No display of "Cases" on mobile version */
+	display: none;
+}
+
+/* INDEX */
+	/* Banner */
+
+.index-banner{
+	/* Header banner-image for index page */
+	width: 100%;
+	height: calc(100vh - 100px);
+	background-image: url("../img/waterfall.jpg");
+	/* background-image: url("../img/iceland-waterfall.jpg"); */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: grid;
+}
+
+.index-banner h2{
+	/* h2 tag for headline bc subline is more important for SEO */
+	font-family: 'Catamaran', sans-serif;
+	font-size: 48px;
+	color: #eee;
+	font-weight: 900;
+	line-height: 70px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 8px #111;
+	align-self: center;
+	text-align: center;
+}
+
+.index-banner h1{
+	/* h1 tag for SEO optimization */
+	font-family: Cormorant Garamond, sans-serif;
+	font-size: 34px;
+	color: #eee;
+	font-weight: 100;
+	font-style: italic;
+	line-height: 40px;
+	text-shadow: 2px 2px 8px #111;
+	align-self: center;
+	text-align: center;
+}
+
+	/* Welcome Box */
+
+.index-welcome{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+.welcome-box{
+	width: 100vw;
+	padding: 0 10vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	  "msg"
+	  "emp"
+	  "name";
+}
+
+	/* ToDo: font for qote effect*/
+
+.welcome-message{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2em;
+	font-weight: 700;
+	color: #111;
+	line-height: 100px;
+	grid-area: msg;
+	justify-self: center;
+}
+
+/*    switchh to h3 element disabled */
+
+.welcome-emphasize{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2em;
+	color: #111;
+	font-weight: 700;
+	line-height: 100px;
+	text-align: center;
+	grid-area: emp;
+	justify-self: center;
+}
+
+
+.welcome-name{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.2em;
+	color: eee;
+	font-weight: 700;
+	line-height: 100px;
+	text-align: center;
+	grid-area: name;
+	justify-self: center;
+}
+
+/*  Hover effect test
+.welcome-emphasize:hover{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 50;
+	color: #871212;
+	font-weight: 700;
+	text-align: center;
+}
+	*/
+
+
+/* 	Scroll-Effect test outsourced to /test
+h3{
+	margin: 0;
+	padding:0;
+	font-family:sans-serif;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	color: #871212;
+	font-size: 5em;
+}	*/
+
+/* Portfolio section*/
+
+/* 
+h3{	font-size: 24px;
+	font-family: 'Catamaran', sans-serif;
+	color: #333;
+	font-weight: 700;
+}	
+	*/
+
+
+
+	/* Gallery Box */
+
+.index-portfolio{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+.portfolio-box{
+	width: 100vw;
+	margin:  5vh 0;
+	padding: 0 10vw;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5vh 5vw;
+	grid-template-areas: 
+		"hd"
+		"img1"
+		"img2"
+		"img3"
+		"img4"
+		"img5"
+		"img6"
+}
+
+.portfolio-header{
+	font-family: 'Catamaran', serif;
+	font-size: 2.1em;
+	color: #111;
+	font-weight: 700;
+	line-height: 100px;
+	text-align: center;
+	grid-area: hd;
+	justify-self: center;
+}
+
+.portfolio-card{
+	width: 300px;
+	height: 200px;
+	max-height: 250px;
+	max-width: 350px;
+	justify-self: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/*	not in use
+.portfolio-link h2{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.1em;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 2px 2px 8px #111;
+	align-self: center;
+	text-align: center;
+}		*/
+
+#pf1{
+	grid-area: img1;
+	background-image: url("../img/architecture.jpg");
+	alt: "Architektur";
+}
+
+#pf2{
+	grid-area: img2;
+	background-image: url("../img/campervan.jpg");
+}
+
+#pf3{
+	grid-area: img3;
+	background-image: url("../img/zion-np.jpg");
+}
+
+#pf4{
+	grid-area: img4;
+	background-image: url("../img/monumentvalley.jpg");
+}
+
+#pf5{
+	grid-area: img5;
+	background-image: url("../img/subway.jpg");
+}
+
+#pf6{
+	grid-area: img6;
+	background-image: url("../img/iceland-waterfall.jpg");
+}
+
+
+/* Blog Section */
+
+.index-blog{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+.blog-card{
+	width: 100vw;
+	margin-top:  5vh;
+	padding: 0 10vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5vh 5vw;
+	grid-template-areas: 
+		"hd hd hd hd"
+		"bc1"
+		"bc3"
+		"bc3"
+		"bc4"
+}
+
+/* About Section */
+
+.index-about{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+/* Contact Section */
+
+.index-contact{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+footer{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+
+
+
+/* Welcome section for web 
+
+.welcome-box{
+	width: 100vw;
+	padding: 0 10vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	  ". . . ."
+	  "msg msg msg ."
+	  ". emp emp emp"
+	  ". name name name";
+}
+
+.welcome-message{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 4em;
+	font-weight: 700;
+	color: #111;
+	line-height: 100px;
+	grid-area: msg;
+	justify-self: center;
+}
+
+
+.welcome-emphasize{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 4em;
+	color: #111;
+	font-weight: 700;
+	line-height: 100px;
+	text-align: center;
+	grid-area: emp;
+	justify-self: center;
+}
+
+.welcome-name{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2em;
+	color: eee;
+	font-weight: 700;
+	line-height: 100px;
+	text-align: center;
+	grid-area: name;
+	justify-self: center;
+}
+
+/* Portfolio for web 
+.portfolio-box{
+	width: 100vw;
+	margin-top:  5vh;
+	padding: 0 10vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5vh 5vw;
+	grid-template-areas: 
+		"hd hd hd hd"
+		". img1 img2 ."
+		". img3 img4 ."
+		". img5 img6 ."
+		". . . ."
+}
+*/
+
+
+/* Blog Section */
+
+/*  Web version
+.index-blog{
+	height: fit-content;
+	width: 100vw;
+	margin-top:  5vh;
+	background-color: #fff;
+	height: fit-content;
+	display: flex;
+}
+
+.blog-card{
+	width: 100vw;
+	margin-top:  5vh;
+	padding: 0 10vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5vh 5vw;
+	grid-template-areas: 
+		"hd hd hd hd"
+		". bc1 bc2 ."
+		". bc3 bc4 ."
+		". . . ."
+}
+
+*/
