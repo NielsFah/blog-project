@@ -1,0 +1,73 @@
+
+#about {
+    display: grid;
+	grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+	grid-gap: 40px;
+	padding: 60px 0;
+}
+.about-me-area{
+    background-color: #ecf0f1;
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+}
+.about-img-container {
+    grid-column: 1 / span 6;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-img-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-content{
+    padding: 10px;
+    grid-column: 7 / span 7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about-title {
+    margin-bottom: 20px;
+    font-size: 48x;
+}
+.about-text {
+    text-align: justify;
+}
+
+    /* changes card section to show 2 cards per line when below 1024px screen width 
+        for tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .about-img-container{
+        grid-column-end: span 13;
+   }
+   .about-img-container img {
+        width: 100%;
+   }
+
+   .about-content {
+        grid-column: 1 / span 13;
+    }
+}
+
+ /* Style for mobile : 1 blog card per line when screen < 700px 
+    smaller grid gaps */
+
+@media only screen and (max-width: 800px) {
+    .about-img-container {
+        grid-column-end: span 13;
+    }
+    .about-content {
+        grid-column: 1 / span 13;
+    }
+}

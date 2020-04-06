@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+}
+
+    /* Section for Blog Cards set to 14 columns, 2fr + 12 with max 60px each.
+        min auto for auto calculation in terms of responsiveness,  
+        maximum width of 12*60 = 720; + 11*40= 440px grid gaps 
+        720 + 440 = maximum of 1160 px width */
+.index-blog {
+	display: grid;
+	grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+	grid-gap: 40px;
+	padding: 60px 0;
+}
+
+    /*  Blog card section has same grid setting as parent to align ind. cards 
+        cards section starts on 2nd column and spans 12 columns */
+.blog-card-area {
+    grid-column: 2 / span 13;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+}
+
+.portfolio-head{
+    grid-column: 1 / span 13;
+    text-align: center;
+}
+
+    /* each card spans 4 columns 
+        each Card is a flex container for the card content
+        Transition setting for hover effect below */
+.blog-card {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+    /* Hover lift effect when hovering over blog card */
+.blog-card:hover {
+    transform: translateY(-7px);
+}
+
+    /* Image container for blog cards   
+        padding with hidden overflow sets a masking effect
+        on top of image to set aspect ratio of 16:9 */
+.card-img-container {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+    /*centers image regardless of aspect ratio  
+        top/left + transform centers image regardless of actual aspect ratio of image */
+
+
+/*img container hhas issues 1px on the right */
+
+.card-img-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    /* Padding around text to give some spacing */
+.card-content {
+    padding: 10px;
+}
+
+    /* Margin below title to give some spacing */
+.card-title {
+    margin-bottom: 20px;
+}
+    /* Card info container as flex container 
+        for reading time info & Read more button */
+.card-info {
+    display: flex;
+    flex-wrap: nowrap;
+}
+    /* self-made button style to link to post 
+        margin auto moves button to the right */
+.card-button {
+    margin-left: auto;
+    padding: 5px 20px;
+    background-color: #303032;
+    border-radius: 20px;
+}
+
+    /* changes card section to show 2 cards per line when below 1024px screen width 
+        for tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .blog-card {
+    grid-column-end: span 6;
+   }
+}
+
+ /* Style for mobile : 1 blog card per line when screen < 700px 
+    smaller grid gaps */
+
+@media only screen and (max-width: 800px) {
+    #blog {
+        grid-gap: 10px,
+    }
+    .blog-card {
+     grid-column-end: span 12;
+    }
+ }

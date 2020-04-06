@@ -1,0 +1,94 @@
+.contact-area{
+    background-color: #ecf0f1;
+    grid-column: 2 / span 14;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    margin-bottom: 40px;;
+}
+
+.contact-head-container {
+    grid-column: 1 / span 13;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    padding: 10px;
+}
+
+.contact-head-container h2 {
+    padding: 20px;
+}
+
+.contact-img-container {
+    grid-column: 2 / span 5;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-img-container img {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-tags{
+    padding: 10px;
+    grid-column: 7 / span 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#facebook img {
+    width: 80px;
+    padding: 5px;
+}
+
+#instagram img {
+    width: 80px;
+    padding: 5px;
+}
+
+#mail img {
+    width: 100px;
+    padding: 18px;
+}
+
+    /* changes card section to show 2 cards per line when below 1024px screen width 
+        for tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .contact-area {
+        grid-column-end: span 13;
+   }
+}
+
+
+ /* Style for mobile : 1 blog card per line when screen < 700px 
+    smaller grid gaps */
+
+@media only screen and (max-width: 800px) {
+    .contact-area {
+        grid-column-end: span 13;
+    }
+
+    .contact-img-container {
+        grid-column: 1 / span 13;
+    }
+
+    .contact-tags {
+        grid-column: 1 / span 13;
+    }
+    #facebook{
+        width: 80px;
+        padding: 10px;
+    }
+    #instagram{
+        width: 80px;
+        padding: 10px;
+    }
+    #mail{
+        width: 80px;
+        padding: 15px;
+    }
+ }

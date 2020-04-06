@@ -1,0 +1,195 @@
+
+/* Hides subareas of index.html in nav bar */
+#hide {
+    display: none;
+}
+
+/* style to give article good readabilty through width and contrast to background color */
+.blogpost {
+    margin: 0px auto ;
+    background-color: #ecf0f1;
+    width: 75vw;
+}
+
+/* Grid template for blog article with template areas    */
+.blogpost-area {
+	width: 100%;
+	margin: auto;
+    display: grid;
+    grid-gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+        "banner banner banner"
+        "info info info"
+        "header header header"
+        "article article article"
+        "author author author";
+}
+
+.blogpost-banner{
+    grid-area: banner; 
+    margin: auto;
+}
+
+.blogpost-banner img{
+    width: 100%;
+    margin: auto;
+    align-self: center;
+}
+
+.blogpost-header {
+    width: 100%;
+    text-align: center;
+    line-height: 70px !important;
+    padding: 10px;
+    grid-area: header; 
+    align-self: center;
+}
+
+.blog-head-info{
+    width: 100%;
+    line-height: 50px;
+    padding: 0px 100px;
+    background-color: #303032;
+    grid-area: info; 
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.blog-head-info strong{
+    font-size: 12px;
+}
+
+.blogpost-article {
+    width: 60vw;
+    display: block;
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    line-height: 70px;
+    padding: 10px 50px;
+    grid-area: article;    
+}
+
+.author-box{
+    padding: 20px 0;
+    margin-top: 20px;
+    align-self: center;
+    justify-self: center;
+    grid-area: author;    
+}
+
+.article-info{
+    width: 100%;
+    padding: 60px;
+    grid-area: about;
+    align-self: center;
+    text-align: left;
+    line-height: 20px;
+    display: block;
+}
+
+.author-bio{
+    grid-area: author;
+    align-self: center;
+    justify-self: center;
+    line-height: 20px;
+}
+
+.author-avatar{
+    grid-area: avatar;
+    padding: 60px;
+}
+
+.author-avatar img{
+    width: 50%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#button-top {
+    border: none;
+    outline: none;
+    background-color: #303032;
+    color: #ecf0f1;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #button-top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+@media only screen and (max-width: 1024px) {
+    .blogpost {
+        margin: 0px auto ;
+        background-color: #ecf0f1;
+        width: 75vw;
+    }
+
+    .blogpost-article {
+        width: 80vw;  
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .blogpost {
+        width: 90vw;
+    }
+
+    .blogpost-article {
+        width: 80vw;
+        padding: 5px 20px;  
+    }
+
+    .blog-head-info{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+ }
+
+ /* Style for small mobile phones: 1 blog card per line when screen < 500px 
+    new grid sizes to match small screen */
+ @media only screen and (max-width: 600px) {
+     
+    .blogpost {
+        margin: 0px auto ;
+        background-color: #ecf0f1;
+        width: 95vw;
+    }
+    .blogpost-area{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "banner banner banner"
+            "info info info"
+            "header header header"
+            "article article article"
+            "author author author";
+    }
+    .blogpost-article {
+        width: 80vw;
+        display: block;
+        align-self: center;
+        justify-self: center;
+        text-align: justify;
+        padding: 10px 50px;
+        grid-area: article;    
+    }
+    .blog-head-info{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+ }

@@ -1,0 +1,79 @@
+.index-portfolio {
+    display: grid;
+	grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+	grid-gap: 40px;
+	padding: 60px 0;
+}
+.portfolio-area{
+    background-color: #ecf0f1;
+    grid-column: 2 / span 13;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+}
+
+.portfolio-head{
+    grid-column: 1 / span 12;
+    text-align: center;
+}
+
+.portfolio-box {
+    grid-column: span 6;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-7px);
+}
+
+.portfolio-img {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.portfolio-caption {
+    padding: 10px;
+    text-align: center;
+}
+
+    /* changes card section to show 2 cards per line when below 1024px screen width 
+        for tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .portfolio-box {
+        grid-column-end: span 12;
+        width: 100vw;
+   }
+   .portfolio-area {
+        grid-column-end: span 12;
+        grid-gap: 10px;
+   }
+}
+
+ @media only screen and (max-width: 1024px) {
+    .portfolio-box {
+        grid-column: 1 / span 12;
+   }
+   .portfolio-area {
+        grid-column: 1 / span 12;
+        grid-gap: 10px;
+   }
+}
+
+ /* Style for mobile : 1 blog card per line when screen < 700px 
+    smaller grid gaps */
+
+@media only screen and (max-width: 700px) {
+    .portfolio-box {
+        grid-column-end: span 12;
+    }
+ }
